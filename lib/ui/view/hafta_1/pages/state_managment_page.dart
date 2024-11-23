@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:odev/ui/view/hafta_1/pages/result_page.dart';
 
+//aktif veri değişiklği olacağı için sayfa StateFull
+
 class Page2 extends StatefulWidget {
   const Page2({super.key});
 
@@ -21,15 +23,23 @@ class _Page2State extends State<Page2> {
       body: Column(
         children: [
 
+          //kaç kere tıklandı Texti 
+
           const Spacer(flex: 30,),
           Column(
             children: [
+              //-----------------------------------------Butona her tıkladığında textin
+              //-----------------------------------------o kadar büyümesini sağlar
               Text("$counter",style: TextStyle(fontSize: counter.toDouble() + 40),)
             ],
           ),
+
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+
+              // artı butonu
+
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -47,6 +57,9 @@ class _Page2State extends State<Page2> {
                   ),
                 ),
               ),
+
+              // eksi butonu
+
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -66,6 +79,9 @@ class _Page2State extends State<Page2> {
               )
             ],
           ),
+
+          // sonuç sayfası butonu
+
           Row(
             children: [
               Expanded(
@@ -79,9 +95,9 @@ class _Page2State extends State<Page2> {
                   ),
                 ),
               )
-
             ],
           ),
+
           const Spacer(flex: 70,),
         ],
       ),
