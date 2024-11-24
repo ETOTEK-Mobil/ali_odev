@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-//sayfa istenildiği gibi Stateless aktif veri değişikliği olmayacak
-
 class Page1 extends StatelessWidget {
   const Page1({super.key});
 
@@ -9,10 +7,6 @@ class Page1 extends StatelessWidget {
   Widget build(BuildContext context) {
 
     var screenInfo = MediaQuery.of(context);
-
-    //ekran boyutunun bilgisini alır
-    //böylece ekran yatayken oran sağlanmış olur
-    
     final double screenHeight = screenInfo.size.height;
     final double screenWidht = screenInfo.size.width;
 
@@ -27,9 +21,6 @@ class Page1 extends StatelessWidget {
             children: [
               Row(
                 children: [
-
-                  //Row 1
-
                   Expanded(
                     child: Container(
                       height: screenHeight/3,
@@ -37,9 +28,6 @@ class Page1 extends StatelessWidget {
                       child:const Center(child: Text("Row 1")),
                     ),
                   ),
-
-                  //Row 2
-
                   Expanded(
                     child: Container(
                       height: screenHeight/3,
@@ -49,9 +37,6 @@ class Page1 extends StatelessWidget {
                   )
                 ],
               ),
-
-              //Column 1
-
               Expanded(
                 child: Container(
                   height: screenHeight/3,
@@ -59,9 +44,6 @@ class Page1 extends StatelessWidget {
                   child:const Center(child: Text("Column 1",style: TextStyle(color: Colors.white),)),
                 ),
               ),
-
-              //Column 2
-
               Expanded(
                 child: Container(
                   height: screenHeight/3,
@@ -71,9 +53,6 @@ class Page1 extends StatelessWidget {
               ),
             ],
           ),
-
-          //Circle 1
-
           Positioned(
             top: screenHeight/3 -50,
             left: screenWidht/2 - 50,
@@ -87,7 +66,6 @@ class Page1 extends StatelessWidget {
               child:const Center(child: Text("Circle 1")),
             ),
           ),
-
         ],
       )
     );
