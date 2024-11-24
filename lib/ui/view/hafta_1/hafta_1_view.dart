@@ -9,48 +9,47 @@ class Hafta1View extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 233, 211, 211),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            //First Button
-            Padding(
-              padding: const EdgeInsets.all(AppSize.md),
-              child: SizedBox(
-                width: 200,
-                height: AppSize.buttonHeight,
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.white,
+        backgroundColor: const Color.fromARGB(255, 233, 211, 211),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              //First Button
+              Padding(
+                padding: const EdgeInsets.all(AppSize.md),
+                child: SizedBox(
+                  width: 200,
+                  height: AppSize.buttonHeight,
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.white,
+                    ),
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const Page1()));
+                    },
+                    child: const Text("Column, Row and Stack"),
                   ),
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) =>const Page1()));
-                  },
-                  child:const Text("Columb, Row and Stack"),
-                  ),
+                ),
               ),
-            ),
-            //Second Button
-            Padding(
-              padding: const EdgeInsets.all(AppSize.md),
-              child: SizedBox(
-                width: 200,
-                height: AppSize.buttonHeight,
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.white,
+              //Second Button
+              Padding(
+                padding: const EdgeInsets.all(AppSize.md),
+                child: SizedBox(
+                  width: 200,
+                  height: AppSize.buttonHeight,
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.white,
+                    ),
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const Page2()));
+                    },
+                    child: const Text("State Managment"),
                   ),
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) =>const Page2()));
-                  },
-                  child:const Text("State Managment"),
-                  ),
+                ),
               ),
-            ),
-          ],
-        ),
-      )
-    );
+            ],
+          ),
+        ));
   }
 }
