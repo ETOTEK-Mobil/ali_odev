@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:odev/core/constants/app_sizes.dart';
 import 'package:odev/ui/view/hafta_1/pages/column_row_stack_page.dart';
 import 'package:odev/ui/view/hafta_1/pages/state_managment_page.dart';
 
@@ -14,39 +13,29 @@ class Hafta1View extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //First Button
-            Padding(
-              padding: const EdgeInsets.all(AppSize.md),
-              child: SizedBox(
-                width: 200,
-                height: AppSize.buttonHeight,
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.white,
-                  ),
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) =>const Page1()));
-                  },
-                  child:const Text("Columb, Row and Stack"),
-                  ),
-              ),
+            SizedBox(
+              width: 200,
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.white,
+                ),
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) =>const Page1()));
+                },
+                child:const Text("Columb, Row and Stack"),
+                ),
             ),
-            //Second Button
-            Padding(
-              padding: const EdgeInsets.all(AppSize.md),
-              child: SizedBox(
-                width: 200,
-                height: AppSize.buttonHeight,
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.white,
-                  ),
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) =>const Page2()));
-                  },
-                  child:const Text("State Managment"),
-                  ),
-              ),
+            SizedBox(
+              width: 200,
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.white,
+                ),
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) =>const Page2()));
+                },
+                child:const Text("State Managment"),
+                ),
             ),
           ],
         ),

@@ -16,11 +16,9 @@ class _Page3State extends State<Page3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         title:const Text("Result"),
       ),
-
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -29,7 +27,6 @@ class _Page3State extends State<Page3> {
           ],
         ),
       ),
-      
     );
   }
 }
