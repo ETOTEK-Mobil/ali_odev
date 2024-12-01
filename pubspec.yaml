@@ -9,6 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  webview_flutter: ^4.0.6
+  cached_network_image: ^3.2.1
+  intl: ^0.18.1
 
 dev_dependencies:
   flutter_test:
@@ -17,3 +20,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+   - "lib/images/etotek.png"
+   - "lib/images/etotek.ico"
