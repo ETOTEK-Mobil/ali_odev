@@ -16,7 +16,7 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   final List<Widget> _tabs = [
     const Hafta1View(),
-    const Hafta2View(),
+    Hafta2View(),
     const Hafta3View(),
     const Hafta4View(),
     const Hafta5View(),
